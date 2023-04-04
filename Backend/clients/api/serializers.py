@@ -25,5 +25,4 @@ class ClientSerializer(serializers.ModelSerializer):
             )
         
         
-        
         return data
