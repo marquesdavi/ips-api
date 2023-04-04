@@ -32,3 +32,8 @@
 8. Type `python manage.py migrate`
 9. Type `python manage.py createsuperuser` and follow the steps.
 
+
+## Implemented features:
+- [ ] Authentication
+- [ ] Client registering
+- [ ] Payments list

@@ -7,7 +7,9 @@ from rest_framework import serializers
 
 
 class ClientsViewSet(viewsets.ModelViewSet):
-    """This viewset consists in create, list and update the clients"""
+    """
+    This viewset consists in create, list and update the clients
+    """
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
 
@@ -15,11 +17,20 @@ class ClientsViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         person_email = self.request.data.get('email_address')
+        client_name = self.request.data.get('name')
+        monthly_fee:int = 65
+        service:str = 'Plano de internet banda larga com capacidade de 50mb'
+
         try:
             if self.action == 'create':
                 send_mail(
-                    'Test title',
-                    'Test message',
+                    f'Confirmação de cadastro - {client_name}',
+                    f"""
+                    Seu cadastro foi realizado com sucesso!\n
+                    Serviço: {service}\n
+                    Cliente: {client_name}\n
+                    Valor: R$ {float(monthly_fee)}\n
+                    """,
                     config('EMAIL_HOST_USER'),
                     [f'{person_email}']
                 )
