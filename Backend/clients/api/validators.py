@@ -1,4 +1,5 @@
 from datetime import date, timedelta
+from validate_docbr import CPF
 
 
 def valid_name(name):
@@ -13,3 +14,6 @@ def valid_birth_date(birth_date):
     return birth_date < legal_age
 
 
+def validate_cpf(cpf_number:str):
+    cpf = CPF()
+    return cpf.validate(cpf_number)

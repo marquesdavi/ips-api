@@ -11,12 +11,19 @@ class ClientSerializer(serializers.ModelSerializer):
     def validate(self, data):
         if not valid_name(data['name']):
             raise serializers.ValidationError(
-                {"name":"The 'name' field must be alphanumeric!"}
+                {'name':"The 'name' field must be alphanumeric!"}
             )
         
         if not valid_birth_date(data['birth_date']):
             raise serializers.ValidationError(
-                {'birth_date' : "You must have 18 years or more"}
+                {"birth_date" : "You must have 18 years or more"}
             )
+        
+        if not validate_cpf(data['cpf_number']):
+            raise serializers.ValidationError(
+                {"cpf_number":"This CPF is not valid! Try again..."}
+            )
+        
+        
         
         return data
