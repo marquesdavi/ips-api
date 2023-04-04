@@ -27,8 +27,8 @@ class Client(models.Model):
         unique=True
     )
 
-    issuing_entity = models.Charfield(
-        max_lenght=30,
+    issuing_entity = models.CharField(
+        max_length=30,
         blank=True
     )
 
@@ -49,11 +49,12 @@ class Client(models.Model):
         null=False
     )
 
-    phone_number = models.Charfield(
-        max_lenght=14
+    phone_number = models.CharField(
+        max_length=14,
+        blank=True
     )
 
     email_address = models.EmailField(
-        blank=False, 
+        blank=True, 
         max_length=80, 
     )
