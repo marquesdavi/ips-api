@@ -24,5 +24,4 @@ class ClientSerializer(serializers.ModelSerializer):
                 {"cpf_number":"This CPF is not valid! Try again..."}
             )
         
-        
         return data
