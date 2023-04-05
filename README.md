@@ -9,6 +9,7 @@
 - Django Rest Framework
 - Decouple
 - Validate DocBr
+- SimpleJWT
 - Docker *(Not implemented yet)*
 - Pandas *(Not implemented yet)*
 
@@ -34,6 +35,6 @@
 
 
 ## Implemented features:
-- [ ] Authentication
+- [x] Authentication
 - [ ] Client registering
 - [ ] Payments list
