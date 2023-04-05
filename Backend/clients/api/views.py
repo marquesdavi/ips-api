@@ -4,6 +4,7 @@ from .serializers import ClientSerializer
 from django.core.mail import send_mail
 from decouple import config
 from rest_framework import serializers
+from rest_framework.permissions import IsAuthenticated
 
 
 class ClientsViewSet(viewsets.ModelViewSet):
@@ -12,14 +13,15 @@ class ClientsViewSet(viewsets.ModelViewSet):
     """
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
+    permission_classes = [IsAuthenticated,]
 
     http_method_names = ['get', 'post', 'patch']
 
     def perform_create(self, serializer):
         person_email = self.request.data.get('email_address')
         client_name = self.request.data.get('name')
-        monthly_fee:int = 65
-        service:str = 'Plano de internet banda larga com capacidade de 50mb'
+        monthly_fee:int = 100
+        service:str = 'service'
 
         try:
             if self.action == 'create':
