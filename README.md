@@ -10,7 +10,8 @@
 - Decouple
 - Validate DocBr
 - SimpleJWT
-- Docker *(Not implemented yet)*
+- PostgreSQL
+- Docker-compose
 - Pandas *(Not implemented yet)*
 
 ## How to setup the project
@@ -33,8 +34,3 @@
 8. Type `python manage.py migrate`
 9. Type `python manage.py createsuperuser` and follow the steps.
 
-
-## Implemented features:
-- [x] Authentication
-- [ ] Client registering
-- [ ] Payments list
