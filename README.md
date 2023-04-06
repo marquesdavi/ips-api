@@ -21,7 +21,7 @@
 4. Create a `.env` file in the "Backend" path
 5. Add the following enviroment variables:
     ```
-    SECRET_KEY=django-insecure-dcf229wl)z_xsw$@zdsh_s&nspw==p4s(k%-n2(0!8)ya=igna
+    SECRET_KEY=yourownsecretkey
 
     EMAIL_HOST_USER=youremail@email.com
     EMAIL_HOST_PASSWORD=youremailpassword
