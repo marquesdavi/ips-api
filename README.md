@@ -3,7 +3,7 @@
 
 :warning: **This project is still in the development phase. In the coming days, new features will be added and better documentation.**
 
-## Used technologies and libraries:
+## Used technologies and libraries :books:
 - Python
 - Django
 - Django Rest Framework
@@ -35,9 +35,26 @@
     DB_HOST=localhost
     DB_PORT=5431
     ```
-6. Open the terminal again and type `sudo docker-compose up --build`
-7. Open another terminal
-8. Type `python manage.py migrate`
-9. Run the `populate_database.py` (folder path: Backend/populate_database.py)
-10. Type `python manage.py createsuperuser` and follow the steps.
+6. Create a file called `.env.docker` in the main repository folder
+7. Add the following enviroment variables:
+    ```
+    SECRET_KEY=yourownsecretkey
+
+    EMAIL_HOST_USER=youremail@email.com
+    EMAIL_HOST_PASSWORD=youremailpassword
+    EMAIL_USE_TLS=True
+    EMAIL_PORT=emailsmtpport
+    EMAIL_HOST=youremailsmtpserver
+
+    DATABASE_DB=ipsdb
+    DATABASE_USER=postgres
+    DATABASE_PASSWORD=postgres
+    DB_HOST=db
+    DB_PORT=5432
+    ```
+8. Open the terminal again and type `sudo docker-compose up --build`
+9. Open another terminal
+10. Type `python manage.py migrate`
+11. Run the `populate_database.py` (folder path: Backend/populate_database.py)
+12. Type `python manage.py createsuperuser` and follow the steps.
 
