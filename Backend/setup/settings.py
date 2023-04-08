@@ -29,10 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'accounts.User'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -101,11 +103,14 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DATABASE_DB', 'ipsdb'),  # postgres
+        'NAME': config('DATABASE_DB', 'ips_db'),  # postgres
         'USER': config('DATABASE_USER', 'postgres'),
         'PASSWORD': config('DATABASE_PASSWORD', 'postgres'),
         'HOST': config('DB_HOST', 'localhost'),
         'PORT': config('DB_PORT', 5431, cast=int),
+        'OPTIONS': {
+            'options': '-c search_path=public'
+        }
     }
 }
 
