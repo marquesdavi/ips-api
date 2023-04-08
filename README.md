@@ -16,10 +16,9 @@
 
 ## How to setup the project
 1. Do `git clone https://github.com/marquesdavi/ips-api.git`
-2. Open the terminal and type `cd Backend` to enter in the Backend folder.
-3. Type `python -m venv venv` and then `source venv/bin/activate`(Linux users) or `venv/Scripts/activate`(Windows users)
-4. Create a `.env` file in the "Backend" path
-5. Add the following enviroment variables:
+2. Type `python -m venv venv` and then `source venv/bin/activate`(Linux users) or `venv/Scripts/activate`(Windows users)
+3. Create a `.env` file in the "Backend" path
+4. Add the following enviroment variables:
     ```
     SECRET_KEY=yourownsecretkey
 
@@ -35,8 +34,8 @@
     DB_HOST=localhost
     DB_PORT=5431
     ```
-6. Create a file called `.env.docker` in the main repository folder
-7. Add the following enviroment variables:
+5. Create a file called `.env.docker` in the main repository folder
+6. Add the following enviroment variables:
     ```
     SECRET_KEY=yourownsecretkey
 
@@ -52,9 +51,9 @@
     DB_HOST=db
     DB_PORT=5432
     ```
-8. Open the terminal again and type `sudo docker-compose up --build`
-9. Open another terminal
-10. Type `python manage.py migrate`
-11. Run the `populate_database.py` (folder path: Backend/populate_database.py)
-12. Type `python manage.py createsuperuser` and follow the steps.
+7. Open the terminal again and type `sudo docker-compose up --build`
+8. Open another terminal
+9. Type `python manage.py migrate`
+10. Run the `populate_database.py` (folder path: Backend/populate_database.py)
+11. Type `python manage.py createsuperuser` and follow the steps.
 
