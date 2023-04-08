@@ -3,6 +3,9 @@
 
 :warning: **This project is still in the development phase. In the coming days, new features will be added and better documentation.**
 
+## What does the IPS System do :interrobang:
+The IPS System have 4 main apps: The user management app, the customer management app, the service management app, and the payment and monthly fee management app.
+
 ## Used technologies and libraries :books:
 - Python
 - Django
@@ -53,7 +56,7 @@
     ```
 7. Open the terminal again and type `sudo docker-compose up --build`
 8. Open another terminal
-9. Type `python manage.py migrate`
-10. Run the `populate_database.py` (folder path: Backend/populate_database.py)
-11. Type `python manage.py createsuperuser` and follow the steps.
+9. Type `python manage.py createsuperuser` and follow the steps.
+
+**Extra:** Run the `python populate_database.py` if you want to have some data in your database.(folder path: Backend/populate_database.py)
 
