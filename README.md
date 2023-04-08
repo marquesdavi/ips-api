@@ -31,11 +31,11 @@ The IPS System have 4 main apps: The user management app, the customer managemen
     EMAIL_PORT=emailsmtpport
     EMAIL_HOST=youremailsmtpserver
 
-    DATABASE_DB=ipsdb
+    DATABASE_DB=ips_db
     DATABASE_USER=postgres
     DATABASE_PASSWORD=postgres
     DB_HOST=localhost
-    DB_PORT=5431
+    DB_PORT=5432
     ```
 5. Create a file called `.env.docker` in the main repository folder
 6. Add the following enviroment variables:
@@ -48,7 +48,7 @@ The IPS System have 4 main apps: The user management app, the customer managemen
     EMAIL_PORT=emailsmtpport
     EMAIL_HOST=youremailsmtpserver
 
-    DATABASE_DB=ipsdb
+    DATABASE_DB=ips_db
     DATABASE_USER=postgres
     DATABASE_PASSWORD=postgres
     DB_HOST=db
