@@ -4,7 +4,23 @@
 :warning: **This project is still in the development phase. In the coming days, new features will be added and better documentation.**
 
 ## What does the IPS System do :interrobang:
-The IPS System have 4 main apps: The user management app, the customer management app, the service management app, and the payment and monthly fee management app.
+The IPS System have 4 main apps: The user management app, the customer management app, the service management app, and the financial app.
+### Implemented features
+- User management module - [x]
+- Customer management module - **Partially implemented**
+- Service management module - Not implemented
+- Financial module - Not implemented
+
+## Some screenshots:
+
+### Login endpoint (JWT):
+![image](https://github.com/marquesdavi/ips-api/assets/50294449/9d5dca1b-f149-49d8-930a-c8c4cb2e6539)
+
+### Customer management endpoint:
+**PS: These are not real customer data.**
+GET Method:
+![image](https://github.com/marquesdavi/ips-api/assets/50294449/e135bc24-9ff5-4a23-a715-019bfda82e8d)
+POST Method:
 
 ## Used technologies and libraries :books:
 - Python
