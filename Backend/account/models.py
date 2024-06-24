@@ -1,4 +1,4 @@
-# accounts/models.py
+# account/models.py
 from __future__ import unicode_literals
 
 from django.contrib.auth.base_user import AbstractBaseUser

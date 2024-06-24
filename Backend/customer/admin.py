@@ -1,5 +1,5 @@
 from django.contrib import admin
-from clients.models import Client
+from customer.models import Customer
 
 # Register your models here.
 """class Clients(admin.ModelAdmin):
@@ -10,4 +10,4 @@ from clients.models import Client
     ordering = ('name',)"""
 
 
-admin.site.register(Client)
+admin.site.register(Customer)

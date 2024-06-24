@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import Client
+from ..models import Customer
 from .serializers import ClientSerializer
 from django.core.mail import send_mail
 from decouple import config
@@ -9,9 +9,9 @@ from rest_framework.permissions import IsAuthenticated
 
 class ClientsViewSet(viewsets.ModelViewSet):
     """
-    This viewset consists in create, list and update the clients
+    This viewset consists in create, list and update the customer
     """
-    queryset = Client.objects.all()
+    queryset = Customer.objects.all()
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated,]
 

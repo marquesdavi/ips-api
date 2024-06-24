@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from clients.api.views import ClientsViewSet
+from customer.api.views import ClientsViewSet
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -24,7 +24,7 @@ from rest_framework_simplejwt.views import (
 )
 
 router = routers.DefaultRouter()
-router.register('clients', ClientsViewSet)
+router.register('customer', ClientsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

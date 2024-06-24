@@ -1,7 +1,7 @@
-# accounts/tests.py
+# account/tests.py
 from django.test import TestCase
 
-from accounts.models import User
+from account.models import User
 
 
 class TestUser(TestCase):

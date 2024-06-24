@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from ..models import Client
+from ..models import Customer
 from .validators import *
 
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Client
+        model = Customer
         fields = '__all__'
 
     def validate(self, data):

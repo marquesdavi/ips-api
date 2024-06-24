@@ -74,5 +74,5 @@ POST Method:
 8. Open another terminal
 9. Type `python manage.py createsuperuser` and follow the steps.
 
-**Extra:** Run the `python populate_database.py` if you want to have some data in your database.(folder path: Backend/populate_database.py)
+**Extra:** Run the `docker-compose exec app python populate_database.py` if you want to have some data in your database.(folder path: Backend/populate_database.py)
 

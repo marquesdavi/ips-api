@@ -3,21 +3,21 @@ version: "3.8"
 services:
   db:
     container_name: ips_db
-    image: postgres:14-alpine
+    image: postgres:16-alpine
     restart: always
-    user: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=ips_db
     volumes:
       - pgdata:/var/lib/postgresql/data
-    environment:
-      - LC_ALL=C.UTF-8
-      - DATABASE_PASSWORD=postgres
-      - DATABASE_USER=postgres
-      - DATABASE_DB=ips_db
     ports:
-      - 5432:5432
+      - "5435:5432"
+    expose:
+      - "5432"
     networks:
-     - ips-network
-  
+      - ips-network
+
   pgadmin:
     container_name: django_pgadmin
     image: dpage/pgadmin4
@@ -40,11 +40,9 @@ services:
     container_name: ips_management_web
     hostname: app
     stdin_open: true
-    expose:
-      - '8000'
     volumes:
       - .env.docker:/app/.env
-    command: bash -c "python manage.py migrate && gunicorn setup.wsgi:application -b 0.0.0.0:8000"
+    entrypoint: ["/app/entrypoint.sh"]
     depends_on:
       - db
     networks:
